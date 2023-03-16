@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>leetcode刷题思考3 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="13. Roman to Integer Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. 1Symbol       ValueI             1V             5X             10L             50C             1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode刷题思考3">
+<meta property="og:url" content="http://example.com/2022/08/24/08/leetcode%E5%88%B7%E9%A2%98%E6%80%9D%E8%80%833/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="13. Roman to Integer Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. 1Symbol       ValueI             1V             5X             10L             50C             1">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-08-24T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-16T06:19:58.724Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-08/leetcode刷题思考3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/24/08/leetcode%E5%88%B7%E9%A2%98%E6%80%9D%E8%80%833/" class="article-date">
+  <time class="dt-published" datetime="2022-08-24T00:00:00.000Z" itemprop="datePublished">2022-08-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/coding/">coding</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      leetcode刷题思考3
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>13. Roman to Integer</p>
+<p>Roman numerals are represented by seven different symbols: <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Symbol       ValueI             1V             5X             10L             50C             100D             500M             1000</span><br></pre></td></tr></table></figure>
+
+<p>For example, <code>2</code> is written as <code>II</code> in Roman numeral, just two one’s added together. <code>12</code> is written as <code>XII</code>, which is simply <code>X + II</code>. The number <code>27</code> is written as <code>XXVII</code>, which is <code>XX + V + II</code>.</p>
+<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>
+<ul>
+<li><code>I</code> can be placed before <code>V</code> (5) and <code>X</code> (10) to make 4 and 9.</li>
+<li><code>X</code> can be placed before <code>L</code> (50) and <code>C</code> (100) to make 40 and 90.</li>
+<li><code>C</code> can be placed before <code>D</code> (500) and <code>M</code> (1000) to make 400 and 900.Given a roman numeral, convert it to an integer.</li>
+</ul>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;III&quot;Output: 3Explanation: III = 3.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;LVIII&quot;Output: 58Explanation: L = 50, V= 5, III = 3.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;MCMXCIV&quot;Output: 1994Explanation: M = 1000, CM = 900, XC = 90 and IV = 4. </span><br></pre></td></tr></table></figure>
+
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 15</code></li>
+<li><code>s</code> contains only the characters <code>(&#39;I&#39;, &#39;V&#39;, &#39;X&#39;, &#39;L&#39;, &#39;C&#39;, &#39;D&#39;, &#39;M&#39;)</code>.</li>
+<li>It is <strong>guaranteed</strong> that <code>s</code> is a valid roman numeral in the range <code>[1, 3999]</code>.</li>
+</ul>
+<p>答案</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int romanToInt(char * s)&#123;</span><br><span class="line">   int value[100]=&#123;0&#125;;</span><br><span class="line">   value[&#x27;I&#x27;]=1;</span><br><span class="line">   value[&#x27;V&#x27;]=5;</span><br><span class="line">   value[&#x27;X&#x27;]=10;</span><br><span class="line">   value[&#x27;L&#x27;]=50;</span><br><span class="line">   value[&#x27;C&#x27;]=100;</span><br><span class="line">   value[&#x27;D&#x27;]=500;</span><br><span class="line">   value[&#x27;M&#x27;]=1000;</span><br><span class="line">   value[&#x27;\0&#x27;]=0;</span><br><span class="line">   int sum = 0;</span><br><span class="line">   for(int i = 0; s[i] != &#x27;\0&#x27;;i++)&#123;</span><br><span class="line">       if(value[s[i]]&lt;value[s[i+1]])&#123;</span><br><span class="line">           sum-=value[s[i]];</span><br><span class="line">      &#125;else&#123;</span><br><span class="line">           sum+=value[s[i]];</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">   return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过几个字母对应的ascii码来生成一个数组类字典，可以对应到相关的数字，后面通过循环解决，如果是这个字母就＋，问题在于三个前后的问题，实际上也就是说，小于后面就是负数，大于就是整数。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/08/24/08/leetcode%E5%88%B7%E9%A2%98%E6%80%9D%E8%80%833/" data-id="clfaqmrv9000rbcie37u7484h" data-title="leetcode刷题思考3" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/08/24/08/leetcode%E5%88%B7%E9%A2%98%E6%80%9D%E8%80%834/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          leetcode刷题思考4
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/08/24/08/leetcode%E5%88%B7%E9%A2%98%E6%80%9D%E8%80%836/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">leetcode刷题思考6</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hailstony/">hailstony</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/lizzie/">lizzie</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/stories/">stories</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/stories/hailstony/">hailstony</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/16/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/30/11/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B018/">leetcode刷题笔记18</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/29/11/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B017/">leetcode刷题笔记17</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/28/11/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B016/">leetcode刷题笔记16</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/27/11/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B012/">leetcode刷题笔记12</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>leetcode刷题笔记9 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Add Binary   Category Difficulty Likes Dislikes    algorithms Easy (50.88%) 5539 593   Given two binary strings a and b, return their sum as a binary string. Example 1: 12Input: a &#x3D; &quot;11&quot;, b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode刷题笔记9">
+<meta property="og:url" content="http://example.com/2022/08/24/08/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B09/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Add Binary   Category Difficulty Likes Dislikes    algorithms Easy (50.88%) 5539 593   Given two binary strings a and b, return their sum as a binary string. Example 1: 12Input: a &#x3D; &quot;11&quot;, b">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-08-24T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-16T06:19:58.916Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-08/leetcode刷题笔记9" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/24/08/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B09/" class="article-date">
+  <time class="dt-published" datetime="2022-08-24T00:00:00.000Z" itemprop="datePublished">2022-08-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/coding/">coding</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      leetcode刷题笔记9
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Add-Binary"><a href="#Add-Binary" class="headerlink" title="Add Binary"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/add-binary/description/">Add Binary</a></h1><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Difficulty</th>
+<th>Likes</th>
+<th>Dislikes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>algorithms</td>
+<td>Easy (50.88%)</td>
+<td>5539</td>
+<td>593</td>
+</tr>
+</tbody></table>
+<p>Given two binary strings <code>a</code> and <code>b</code>, return <em>their sum as a binary string</em>.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: a = &quot;11&quot;, b = &quot;1&quot;</span><br><span class="line">Output: &quot;100&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: a = &quot;1010&quot;, b = &quot;1011&quot;</span><br><span class="line">Output: &quot;10101&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>1 &lt;= a.length, b.length &lt;= 104</code></li>
+<li><code>a</code> and <code>b</code> consist only of <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code> characters.</li>
+<li>Each string does not contain leading zeros except for the zero itself.</li>
+</ul>
+<p><strong>答案：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;string.h&gt;</span><br><span class="line">char * addBinary(char * a, char * b)&#123;</span><br><span class="line">    int lenA = strlen(a), lenB = strlen(b);</span><br><span class="line">    int lenMax = lenA&gt;lenB? lenA:lenB;</span><br><span class="line"></span><br><span class="line">    char *r = (char*)malloc(lenMax+2);</span><br><span class="line">    char add = &#x27;0&#x27;;</span><br><span class="line"></span><br><span class="line">    int i = lenA-1, j = lenB-1, k=0;</span><br><span class="line">    while(lenMax--)&#123;</span><br><span class="line">        int tempA, tempB;</span><br><span class="line">        if(i&gt;=0) tempA = a[i];</span><br><span class="line">        else tempA = &#x27;0&#x27;;</span><br><span class="line">        if(j&gt;=0) tempB = b[j];</span><br><span class="line">        else tempB =&#x27;0&#x27;;</span><br><span class="line"></span><br><span class="line">        switch(tempA + tempB + add)&#123;</span><br><span class="line">            case &#x27;0&#x27;+&#x27;0&#x27;+&#x27;0&#x27;:</span><br><span class="line">                r[k]=&#x27;0&#x27;;</span><br><span class="line">                add=&#x27;0&#x27;;</span><br><span class="line">                break;</span><br><span class="line">            case &#x27;0&#x27;+&#x27;0&#x27;+&#x27;1&#x27;:</span><br><span class="line">                r[k]=&#x27;1&#x27;;</span><br><span class="line">                add=&#x27;0&#x27;;</span><br><span class="line">                break;</span><br><span class="line">            case &#x27;0&#x27;+&#x27;1&#x27;+&#x27;1&#x27;:</span><br><span class="line">                r[k]=&#x27;0&#x27;;</span><br><span class="line">                add=&#x27;1&#x27;;</span><br><span class="line">                break;</span><br><span class="line">            case &#x27;1&#x27;+&#x27;1&#x27;+&#x27;1&#x27;:</span><br><span class="line">                r[k]=&#x27;1&#x27;;</span><br><span class="line">                add=&#x27;1&#x27;;</span><br><span class="line">                break;</span><br><span class="line">        &#125;</span><br><span class="line">        i--;</span><br><span class="line">        j--;</span><br><span class="line">        k++;</span><br><span class="line">    &#125;</span><br><span class="line">    if(add == &#x27;1&#x27;) r[k++]=&#x27;1&#x27;;</span><br><span class="line"></span><br><span class="line">    for(i=0;i&lt;k/2;i++)&#123;</span><br><span class="line">        char temp = r[i];</span><br><span class="line">        r[i]=r[k-i-1];</span><br><span class="line">        r[k-i-1]=temp;</span><br><span class="line">    &#125;</span><br><span class="line">    r[k]=&#x27;\0&#x27;;</span><br><span class="line">    return r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>看起来行数有点多，但是还可以看懂hhhh，这里先写一个简单的，我等下再刷一个复杂的。这道题的思路主要是补0，倒序相加后得出来的结果需要再次加进入，然后注意，所有放入的一定是字符而非数字，这样才能得出正确结果。</p>
+<p><strong>解法2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">void reverse(char* s) &#123;</span><br><span class="line">	int len = 0;</span><br><span class="line">	len=strlen(s);</span><br><span class="line">	for (int i = 0; i &lt; len / 2; i++) &#123;</span><br><span class="line">		char temp = s[i];</span><br><span class="line">		s[i] = s[len - i - 1];</span><br><span class="line">		s[len - i - 1] = temp;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">char* addBinary(char* a, char* b) &#123;</span><br><span class="line">	reverse(a);</span><br><span class="line">	reverse(b);</span><br><span class="line"></span><br><span class="line">	int len_a = strlen(a), len_b = strlen(b);</span><br><span class="line"></span><br><span class="line">	int max = len_a &gt; len_b ? len_a : len_b;</span><br><span class="line">	int carry = 0, len = 0;</span><br><span class="line">	char* ans = (char*)malloc(sizeof(char) * (max + 2));</span><br><span class="line"></span><br><span class="line">	for (int i = 0; i &lt; max; ++i) &#123;</span><br><span class="line">		carry += i &lt; len_a ? (a[i] == &#x27;1&#x27;) : 0;</span><br><span class="line">		carry += i &lt; len_b ? (b[i] == &#x27;1&#x27;) : 0;</span><br><span class="line">		ans[len++] = carry % 2 + &#x27;0&#x27;;</span><br><span class="line">		carry /= 2;</span><br><span class="line">	&#125;</span><br><span class="line">	if(carry)&#123;</span><br><span class="line">		ans[len++] = &#x27;1&#x27;;</span><br><span class="line">	&#125;</span><br><span class="line">	ans[len] = &#x27;\0&#x27;;</span><br><span class="line">	reverse(ans);</span><br><span class="line"></span><br><span class="line">	return ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该解法的精妙之处在于通过判断当前是否为1&#x2F;0来确定是否累加。举个例子，数字是10111和11</p>
+<p>先反转，现在数字变成了a:11101和b:11</p>
+<p>当i&#x3D;0时，a[0] and b[0] is both 1, so carry &#x3D; 2, then ans[0]&#x3D;’0’, and carry became ‘1’.</p>
+<p>when i &#x3D; 1, a[1]&#x3D;1, b[1]&#x3D;1, carry&#x3D;3, then ans[1]&#x3D;’1’, and carry&#x3D;’1’now,</p>
+<p>when i&#x3D;2, a[2]&#x3D;1, b[2]&#x3D;0. Need to be mentioned that here, because the length of b is shorter than 2, so we need to fill in with 0 at the bit. Then carry&#x3D;2, and ans[2]&#x3D; ‘0’, carry became ‘1’ again.</p>
+<p>when i &#x3D;3, a[3]&#x3D;0,b[3]&#x3D;0, carry&#x3D;1,ans [3]&#x3D;1,carry became 0;</p>
+<p>when i &#x3D; 4, a[4]&#x3D;1, b[4]&#x3D;0, ans[4]&#x3D;1, carry&#x3D;0;</p>
+<p>当计算结束，将结果反转后加**’\0’的终止符**后输出即可</p>
+<p>慢慢来，毕竟要把扔掉的代码能力捡起来不是一朝一夕就能做到的事情，对吧</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/08/24/08/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B09/" data-id="clfaqmrw70011bcie1dr8d4jk" data-title="leetcode刷题笔记9" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/08/24/08/leetcode%E5%88%B7%E9%A2%98%E6%80%9D%E8%80%837/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          leetcode刷题思考7
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/08/24/08/%E7%A6%BB%E5%BC%80%E6%98%AF%E4%B8%80%E4%B8%AA%E5%8A%A8%E4%BD%9C%E4%B9%9F%E6%98%AF%E4%B8%80%E4%B8%AA%E8%BF%87%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">离开是一个动作也是一个过程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/coding/">coding</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hailstony/">hailstony</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/lizzie/">lizzie</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/stories/">stories</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/stories/hailstony/">hailstony</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/16/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/30/11/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B018/">leetcode刷题笔记18</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/29/11/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B017/">leetcode刷题笔记17</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/28/11/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B016/">leetcode刷题笔记16</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/27/11/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B012/">leetcode刷题笔记12</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
